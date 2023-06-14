@@ -28,16 +28,23 @@ npm install
 ```
 
 - In the root directory create a `.env` file and add the following env variables
-  `     PORT=<port number of your choice>
-        SALT_ROUNDS=<pass number of time you want hashing>
-        JWT_SECRET=<pass jwt token string>
-        JWT_EXPIRY=<pass duration of expiry>
-  ex:
- ` PORT=3001
-  SALT_ROUNDS=8
-  JWT_SECRET="localhost_333#"
-  JWT_EXPIRY="1h"
+  `  PORT=<port number of your choice>
   `
+  `
+    SALT_ROUNDS=<pass number of time you want hashing>
+  ` 
+  `    
+    JWT_SECRET=<pass jwt token string>
+  `
+  `
+    JWT_EXPIRY=<pass duration of expiry>
+  `
+  ex:
+  `PORT=3001`
+  `SALT_ROUNDS=8`
+  `JWT_SECRET="localhost_333#"`
+  `JWT_EXPIRY="1h"`
+  
 - go inside the `src` folder and execute the following command:
   ```
     npx sequelize init
