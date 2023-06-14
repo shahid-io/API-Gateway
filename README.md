@@ -40,11 +40,13 @@ npm install
     JWT_EXPIRY=<pass duration of expiry>
   `
   ex:
-  `PORT=3001`
-  `SALT_ROUNDS=8`
-  `JWT_SECRET="localhost_333#"`
-  `JWT_EXPIRY="1h"`
-  
+    ```
+    PORT=3001
+    SALT_ROUNDS=8
+    JWT_SECRET="localhost_333#"
+    JWT_EXPIRY="1h"
+  ```
+
 - go inside the `src` folder and execute the following command:
   ```
     npx sequelize init
