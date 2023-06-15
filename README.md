@@ -84,15 +84,18 @@ bcrypt.hashSync(<password>,<salt_round>)
 bcrypt.compareSync(plainPassword, encryptedPassword)
 ```
 - >compareSync function will return true or false after comparing. The function is available in the bcrypt node module.
-`
+
+```
 jwt.sign(input, ServerConfig.JWT_SECRET, { expiresIn: ServerConfig.JWT_EXPIRY } );
 ```
 - >Sign function will return a token which accepts three arguments input, then a secret key to be sent and also expiry time. This function is part of the jsonwebtoken node module.
 ```
 sign(object,<secret_key>,{ expiresIn: <time> }) 
 ```
+
 ```
 jwt.verify(token, ServerConfig.JWT_SECRET)
 ```
+
 - > Verify function is the part of JWT jsonwebtoken node module. To verify and get true or false responses we use this function.
 
