@@ -63,8 +63,9 @@ npm run dev
 ### JWT working and uses.
 
 * JWT - To achieve authentication with jwt (json web token)
-
+```
 const bcrypt = require("bcrypt"); const jwt = require("jsonwebtoken");
+```
 ```
 User.beforeCreate(function encryt(user) {
     const encryptedPasssword = bcrypt.hashSync(
@@ -74,22 +75,22 @@ User.beforeCreate(function encryt(user) {
     user.password = encryptedPasssword;
   });
 ```
-`
+```
 bcrypt.hashSync(<password>,<salt_round>)
-`
+```
 - >The hasSync function is part of the bcrypt node module and it accepts two arguments: the first argument is password and the second is salt round which is an integer. Salt round is basically used as how many rounds we want to hashed our password and after that the encrypted password to be generated.
 
-`
-bcrypt.compareSync(plainPassword, encryptedPassword)
-`
-- >compareSync function will return true or false after comparing. The function is available in the bcrypt node module.
 ```
-jwt.sign(input, ServerConfig.JWT_SECRET, { expiresIn: ServerConfigJWT_EXPIRY } );
+bcrypt.compareSync(plainPassword, encryptedPassword)
+```
+- >compareSync function will return true or false after comparing. The function is available in the bcrypt node module.
+`
+jwt.sign(input, ServerConfig.JWT_SECRET, { expiresIn: ServerConfig.JWT_EXPIRY } );
 ```
 - >Sign function will return a token which accepts three arguments input, then a secret key to be sent and also expiry time. This function is part of the jsonwebtoken node module.
-`
+```
 sign(object,<secret_key>,{ expiresIn: <time> }) 
-`
+```
 ```
 jwt.verify(token, ServerConfig.JWT_SECRET)
 ```
